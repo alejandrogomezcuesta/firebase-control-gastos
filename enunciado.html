@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Práctica: Web de control de gastos con Firebase</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 2rem;
+      max-width: 860px;
+    }
+    h1, h2 {
+      color: #1a202c;
+    }
+    ul, ol {
+      margin-left: 1.5rem;
+    }
+    li {
+      margin-bottom: 0.5rem;
+    }
+    blockquote {
+      margin: 1.5rem 0;
+      padding: 1rem;
+      border-left: 4px solid #3182ce;
+      background: #f7fafc;
+    }
+  </style>
+</head>
+<body>
+  <h1>Práctica: Web de control de gastos con Firebase</h1>
+
+  <h2>Objetivo</h2>
+  <p>Desarrollar una aplicación web de control de gastos que permita a los usuarios iniciar sesión con Google y guardar sus registros de gastos en Firestore. El proyecto debe estar publicado en GitHub Pages y el código debe estar en un repositorio público de GitHub.</p>
+
+  <h2>Requisitos mínimos</h2>
+  <ol>
+    <li>Crear una página web funcional con HTML, CSS y JavaScript.</li>
+    <li>Usar Firebase Authentication para permitir el acceso mediante Google.
+      <ul>
+        <li>El inicio de sesión debe hacerse usando el proveedor de Google.</li>
+        <li>No se aceptan usuarios anónimos ni un inicio de sesión manual sin Firebase.</li>
+      </ul>
+    </li>
+    <li>Usar Cloud Firestore para almacenar los datos de gastos.
+      <ul>
+        <li>Cada usuario debe ver solamente sus propios gastos.</li>
+        <li>Guardar al menos la fecha, la categoría, la descripción y el importe.</li>
+      </ul>
+    </li>
+    <li>Publicar la aplicación en GitHub Pages.
+      <ul>
+        <li>El repositorio debe contener todo el código fuente.</li>
+        <li>La URL de GitHub Pages debe ser accesible públicamente.</li>
+      </ul>
+    </li>
+  </ol>
+
+  <h2>Funcionalidades a implementar</h2>
+  <ul>
+    <li>Registro/login con cuenta de Google.</li>
+    <li>Interfaz para añadir nuevos gastos.</li>
+    <li>Interfaz para editar y borrar los gastos.</li>
+    <li>Interfaz para que haya una gráfica de cuándo se ha gastado de forma visual.</li>
+    <li>Listado de gastos del usuario autenticado.</li>
+    <li>Mostrar el total de gastos y un resumen básico.</li>
+    <li>Guardar los datos en Firestore de manera segura.</li>
+  </ul>
+
+  <h2>Consideraciones importantes</h2>
+  <ul>
+    <li>No olvides configurar correctamente el dominio de autenticación en Firebase.
+      <ul>
+        <li>Un error frecuente es dejar fuera el dominio de GitHub Pages o el dominio local de prueba.</li>
+        <li>Asegúrate de incluir los orígenes autorizados en la configuración de Firebase Authentication.</li>
+      </ul>
+    </li>
+    <li>El código debe estar subido a GitHub y el despliegue debe hacerse con GitHub Pages.</li>
+    <li>El acceso mediante Firebase debe restringirse para que cada usuario solo pueda leer y escribir sus propios documentos.</li>
+  </ul>
+
+  <h2>Extras obligatorios</h2>
+  <ol>
+    <li>Limitar el uso de las credenciales de Google Cloud al dominio de GitHub Pages.
+      <ul>
+        <li>Configura los permisos de OAuth y las credenciales de Cloud para que solo tu app de GitHub Pages pueda usarlas.</li>
+        <li>Esto evita que otra persona use tus credenciales y realice gastos no deseados en la suscripción del proyecto.</li>
+      </ul>
+    </li>
+    <li>Mejorar las reglas de seguridad de Firestore.
+      <ul>
+        <li>No utilices una base de datos de prueba abierta.</li>
+        <li>Define reglas que comprueben que el usuario autenticado solo accede a sus documentos.</li>
+        <li>Asegúrate de que las reglas funcionan también cuando pase más de un mes y no dependan de reglas temporales de prueba.</li>
+      </ul>
+    </li>
+  </ol>
+
+  <h2>Entregables</h2>
+  <ul>
+    <li>Repositorio de GitHub con el código fuente.</li>
+    <li>URL de GitHub Pages donde esté publicada la aplicación.</li>
+  </ul>
+</body>
+</html>
